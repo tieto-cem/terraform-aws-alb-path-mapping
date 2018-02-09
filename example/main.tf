@@ -48,3 +48,7 @@ module "path_mapping" {
   tg_name             = "test-tg"
   tg_vpc_id           = "${data.aws_vpc.default.id}"
 }
+
+output "test" {
+  value = "${module.path_mapping.target_group_arn}"
+}

@@ -31,7 +31,7 @@ resource "aws_lb_listener_rule" "listener_rule" {
   }
 
   condition {
-    field  = "path-pattern"
+    field  = "${var.routing_condition}"
     values = "${var.path_patterns}"
   }
 }

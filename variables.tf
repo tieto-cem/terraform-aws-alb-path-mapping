@@ -11,6 +11,11 @@ EOF
   type = "map"
 }
 
+variable "routing_condition" {
+  description = "The name of the field. Must be one of path-pattern for path based routing or host-header for host based routing"
+  default = "path-pattern"
+}
+
 variable "path_patterns" {
   description = "The path patterns to match."
   type        = "list"
